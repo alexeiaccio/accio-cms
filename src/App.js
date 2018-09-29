@@ -4,8 +4,8 @@ import "./App.css";
 
 const API = `https://api.github.com/graphql`
 const GIT_CONTENT = `https://raw.githubusercontent.com/`
-const getJSON = async url => 
-      await fetch(url)
+
+const getJSON = async url => await fetch(url)
       .then(res => res.json())
 
 const query = `
@@ -30,10 +30,10 @@ class App extends Component {
       this.setState({res})
     })
 
-    fetch(`${API}`,{
+    fetch(`${API}`, {
       method: 'POST',
       headers: {
-        'Authorization': `bearer ${process.env.GIT_TOKEN}`,
+        'Authorization': `bearer ${process.env.GITHUB_TOKEN}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
