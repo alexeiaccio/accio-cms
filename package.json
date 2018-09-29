@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2",
+    "dotenv-webpack": "^1.5.7",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-hot-loader": "^4.3.11",
